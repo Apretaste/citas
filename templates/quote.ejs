@@ -1,0 +1,49 @@
+<div class="row">
+	<div class="col s12">
+		<!-- VIEWS AND LIKES -->
+		<span class="chip tiny spacing"><i class="fas fa-eye"></i> <%= views %></span>
+		<span class="chip tiny spacing"><i class="fas fa-thumbs-up"></i> <span id="likes"><%= likes %></span></span>
+
+		<!-- QUOTE  -->
+		<blockquote>
+			<%= quote %>
+		</blockquote>
+
+		<!-- AUTHOR -->
+		<span class="chip"><i class="fas fa-user"></i> <%= author %></span>
+	</div>
+</div>
+
+<!-- BUTTONS -->
+<div class="fixed-action-btn">
+	<a id="likeBtn" class="btn-floating waves-effect waves-light grey third" href="#!" onclick="like(<%= id %>)">
+		<i class="material-icons">thumb_up</i>
+	</a>
+	<a class="btn-floating waves-effect waves-light grey second modal-trigger" href="#shareModal">
+		<i class="material-icons">share</i>
+	</a>
+	<a class="btn-floating btn-large green" href="#!" onclick="apretaste.send({command:'CITAS RANDOM'})">
+		<i class="fas fa-redo"></i>
+	</a>
+</div>
+
+<!-- SHARE MODAL -->
+<div id="shareModal" class="modal">
+	<input id="quoteId" type="hidden" value="<%= id %>">
+	<div class="modal-content">
+		<div class="input-field">
+			<textarea id="message" class="materialize-textarea"></textarea>
+			<label for="message">Escriba un texto para compartir</label>
+		</div>
+		<ul class="collection one-line preview">
+			<li class="collection-item avatar">
+				<i class="fas fa-quote-right circle"></i>
+				<span class="title"><%= teaser(quote) %></span>
+			</li>
+		</ul>
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class="modal-close waves-effect waves-light btn-flat">Cerrar</a>
+		<a onclick="share()" class="modal-close waves-effect waves-green green-text btn-flat">Enviar</a>
+	</div>
+</div>

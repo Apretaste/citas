@@ -1,0 +1,56 @@
+/* GLOBAL */
+
+blockquote {
+	font-size: x-large;
+}
+
+.author {
+	padding-left: 30px;
+	font-size: large;
+}
+
+/* TAGS */
+
+.chip .icon {
+	float: left;
+	font-size: 16px;
+	line-height: 32px;
+	padding-right: 5px;
+}
+
+.chip.tiny {
+	height: 20px;
+	padding: 0 10px;
+	line-height: 20px;
+	font-size: x-small;
+}
+
+.chip.tiny .icon {
+	line-height: 20px;
+}
+
+.chip.spacing {
+	margin-right: 5px;
+	margin-top: 10px;
+}
+
+/* FLOAT BUTTON */
+
+.bottom-space {
+	margin-bottom: 80px;
+}
+
+.btn-floating.second {
+	margin-right: -10px;
+	width: 45px;
+	height: 45px;
+	line-height: 58px;
+}
+
+.btn-floating.third {
+	bottom: 45px;
+	left: 87px;
+	width: 45px;
+	height: 45px;
+	line-height: 58px;
+}
